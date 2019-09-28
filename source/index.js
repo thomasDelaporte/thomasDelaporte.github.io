@@ -12,34 +12,25 @@ import InternshipsALIONAX from './pages/interships/alionax';
 import IntershipsECF from './pages/interships/ecf';
 import Contact from './pages/Contact';
 
-class Main extends React.Component {
+const Main = () => (
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Layout>
+            <Switch location={this.props.location}>
 
-    constructor(props){
-        super(props);
-    }
+                <Route exact path='/about' component={About} />
+                <Route exact path='/' component={Home} />
 
-    render(){
-        return (
-            <BrowserRouter>
-                <Layout>
-                    <Switch location={this.props.location}>
+                <Route exact path='/interships' component={Interships} />
+                <Route exact path='/internships/ecf' component={IntershipsECF} />
+                <Route exact path='/internships/alionax' component={InternshipsALIONAX} />
 
-                        <Route exact path='/about' component={About} />
-                        <Route exact path='/' component={Home} />
+                <Route exact path='/contact' component={Contact} />
 
-                        <Route exact path='/interships' component={Interships} />
-                        <Route exact path='/internships/ecf' component={IntershipsECF} />
-                        <Route exact path='/internships/alionax' component={InternshipsALIONAX} />
-
-                        <Route exact path='/contact' component={Contact} />
-
-                        <Route path='*' component={Error} />
-                    </Switch>
-                </Layout>
-            </BrowserRouter>
-        )
-    }
-}
+                <Route path='*' component={Error} />
+            </Switch>
+        </Layout>
+    </BrowserRouter>
+)
 
 ReactDOM.render(
     <Main />, document.getElementById('app')
