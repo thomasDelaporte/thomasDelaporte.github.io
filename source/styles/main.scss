@@ -1,0 +1,41 @@
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: Eina, sans-serif;
+    font-size: 13px;
+}
+
+@import './base/reset.scss';
+
+@import './foundation/ionicons.min.css';
+@import './foundation/font.scss';
+@import './foundation/variables.scss';
+@import './foundation/colors.scss';
+@import './foundation/typography.scss';
+
+@import './helpers/padding.scss';
+
+@import './layout/navigation.scss';
+@import './layout/main.scss';
+@import './layout/section.scss';
+@import './layout/grid.scss';
+
+@import './components/button';
+@import './components/thumbnail.scss';
+@import './components/breadcrumbs.scss';
+@import './components/figure.scss';
+@import './components/internship.scss';
+@import './components/list.scss';
+@import './components/article.scss';
+@import './components/quote.scss';
+@import './components/timeline.scss';
+@import './components/form.scss';
+@import './components/caroussel.scss';
+
+@import './pages/index.scss';
+@import './pages/about.scss';
+@import './pages/work.scss';
+@import './pages/internships.scss';
+
+
+@import './responsive.scss';

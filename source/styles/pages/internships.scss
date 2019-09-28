@@ -1,0 +1,78 @@
+.internships {
+    display: flex;
+    flex-direction: column;
+
+    .internship-item {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        
+
+        &.alionax {
+            
+            .internship-item-thumbnail{
+                background-color: #719f41;
+
+                &:after{
+                    background-image: url('http://localhost:8083/images/thumbnail-alionax.png');
+                }
+            }
+        }
+
+        &.ecf {
+
+            .internship-item-thumbnail{
+                background-color: #166dd8;
+
+                &:after{
+                    background-image: url('http://localhost:8083/images/thumbnail-ecf.jpg');
+                }
+            }
+        }
+
+        .internship-item-thumbnail{
+            margin-right: $padding;
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+
+            &:after {
+                content: "";
+                opacity: 0.1;
+                top: -10%;
+                left: -15%;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+            }
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        
+        .internship-item-content {
+            flex: 1;    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            small{
+                text-transform: uppercase;
+                margin-top: 10px;
+            }
+
+            p{
+                margin: 20px 0;
+            }
+            
+            .internship-item-content-actions{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+}

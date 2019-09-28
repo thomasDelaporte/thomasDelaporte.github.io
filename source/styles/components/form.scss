@@ -1,0 +1,43 @@
+.form {
+    padding: $padding 0;
+
+    .form-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    
+        &>*{
+            flex: 1;
+        }
+    
+        &>*:not(:last-child){
+            margin-right: $padding / 2;
+        }   
+    }
+    
+    textarea {
+        display: block; 
+        width: 100%; 
+        height: 12em; 
+        font-family: inherit;
+        padding: $padding / 3;
+    }
+
+    input[type="text"] {
+        height: 46px; 
+        line-height: 46px;
+    }
+
+    input {
+        padding-left: $padding / 3;
+        outline: none;
+        border: none;
+    }
+
+    input[type="submit"] {
+        margin-top: $padding;
+
+        cursor: pointer;
+    }
+}

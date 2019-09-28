@@ -1,0 +1,8 @@
+.main{
+    margin-left: 100px;
+    padding-right: $padding;
+
+    &>*:not(:last-child){
+        margin-bottom: 64px;
+    }
+}

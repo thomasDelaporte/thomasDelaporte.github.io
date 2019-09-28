@@ -1,0 +1,83 @@
+.internship-header{
+    height: calc(100vh - 80px);
+    padding: $padding;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: relative;
+
+    .internship-header-company{
+
+        img{
+            margin-bottom: 50px;
+        }
+
+        h2{
+            text-transform: uppercase;
+        }
+
+        span{
+            font-size: 16px;
+        }
+    }
+
+    p{
+       width: 50%;
+    }
+
+    .internship-header-tags{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .internship-tag-item{
+            display: flex;
+            align-items: center;
+            
+            i{
+                font-size: 28px;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .internship-header-actions{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: $padding;
+        right: $padding;
+    }
+}
+
+.internship-content{
+
+    &>*:not(:last-child), &>.container>*:not(:last-child){
+        margin-bottom: $padding * 2;
+    }
+
+    .internship-technology-item{
+
+        .internship-technology-icons{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            &>img{
+                height: 100px;
+
+                &:not(:last-child){
+                    margin-right: $padding;
+                }
+            }
+        }
+
+        p{
+            text-align: center;
+            margin-top: $padding;
+        }
+    }
+}

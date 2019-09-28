@@ -1,0 +1,75 @@
+.project-featured{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 100px;
+    padding-bottom: 100px;
+
+    &>*:not(.gatsby-image-wrapper){
+        z-index: 1;
+    }
+
+    .project-tags, .project-information{
+        display: flex;
+        flex-direction: row;
+
+        li{
+            margin-right: 40px;
+        }
+    }
+
+    .project-information{
+
+        li{
+            font-style: italic;
+
+            h4{
+                margin-bottom: 10px;
+                font-style: normal;
+            }
+        }
+    }     
+
+    .project-navigation{
+        position: absolute;
+        bottom: $padding * 2;
+        left: $padding;
+        right: $padding;
+        display: flex;
+        flex-direction: row;
+
+        &>div{
+            background-color: #fff;
+            color: #000;
+            min-height: 64px;
+            display: flex;
+            align-items: center;
+            padding: $padding;
+            max-width: 200px;
+
+            a{
+                font-size: 16px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                small{
+                    font-size: 18px;
+                    font-weight: bolder;
+                }
+            }
+
+            &.next{
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.project-thumbnail{
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}

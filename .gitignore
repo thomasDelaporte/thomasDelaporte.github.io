@@ -1,0 +1,28 @@
+package-lock.json
+node_modules
+.env
+
+out
+
+.vscode
+prod.list*
+packages-microsoft-prod.deb*
+
+config.json
+
+CREDITS.md
+
+_temp
+
+dist
+generated
+web-build/dist
+
+# MacOS 
+.DS_Store
+*.icloud*
+
+# IDE / Code Editors
+.vscode
+prod.list*
+packages-microsoft-prod.deb*

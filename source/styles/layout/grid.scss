@@ -1,0 +1,19 @@
+.grid{
+    display: grid;
+    grid-gap: $padding;
+
+    &.grid-e{
+        grid-auto-columns: 1fr;
+        grid-auto-flow: column;
+    }
+
+    &.grid-1-2{
+        grid-auto-columns: 1fr 2fr;
+        grid-auto-flow: column;
+    }
+
+    &.grid-images{
+        height: 500px;
+    }
+}
+

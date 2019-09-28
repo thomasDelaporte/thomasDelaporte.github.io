@@ -1,0 +1,17 @@
+.quote{
+    font-size: 15px;
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.quote-author{
+    font-size: 14px;
+    font-style: italic;
+
+    &:before{
+        content: '-';
+        margin: 0 10px;
+    }
+}

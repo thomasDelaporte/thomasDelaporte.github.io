@@ -1,0 +1,59 @@
+.caroussel {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    bottom: 0;
+    left: 100px;
+    right: $padding;
+    background-color: rgba(0, 0, 0, .8);
+    padding: $padding;
+    display: flex;
+    align-items: center;
+    user-select: none;
+
+    .btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: $padding * 3;
+        width: $padding * 3;
+        transition: all .25s;
+        font-size: 20px;
+
+        &:hover {
+            background-color: #fff;
+            color: #000;
+            height: $padding * 6;
+            box-shadow: 0 6px 14px 0 rgba(0, 0, 0, .25);
+            font-size: 30px;
+        }
+    }
+
+    img{
+        height: 100%;
+        transition: all .25s;
+        margin: 0 auto;
+    }
+
+    &>i{
+        position: absolute;
+        font-size: 30px;
+        color: #fff;
+        transition: all .2s;
+        cursor: pointer;
+        z-index: 2000;
+        filter: drop-shadow(-1px 4px 0 rgba(0, 0, 0, 0.4));
+        
+        &:hover{
+            opacity: .65;
+        }
+
+        &.ion-md-arrow-round-back{
+            left: $padding;
+        }
+
+        &.ion-md-arrow-round-forward{
+            right: $padding;
+        }
+    }
+}

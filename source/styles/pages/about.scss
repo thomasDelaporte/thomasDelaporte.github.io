@@ -1,0 +1,45 @@
+.about{
+    
+    .about-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-right: $padding;
+        
+        h1 {
+            margin-bottom: $padding;
+        }
+
+        .about-links{
+            display: flex;
+            flex-direction: row;
+            margin: $padding 0;
+
+            &>*:not(:last-child){
+                margin-right: $padding / 2;
+            }
+        }
+
+        .about-socials-list{
+            display: flex;
+            flex-direction: row;
+
+            &>*{
+                height: 50px;
+                line-height: 50px;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    #c{
+        background-image: linear-gradient(#1dd2ac 0%, #2e069e 100%);
+    }
+}

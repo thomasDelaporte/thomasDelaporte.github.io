@@ -1,0 +1,21 @@
+.breadcrumbs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    
+    &>a, &>span{
+        text-transform: uppercase;
+        color: #3f3f3f;
+        font-size: 14px;
+
+        &.is-active{
+            color: #fff;
+        }
+    }
+
+    .slash{
+        margin: 0 8px;
+        font-size: 15px;
+    }
+}
