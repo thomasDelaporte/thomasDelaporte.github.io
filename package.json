@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "predeploy": "webpack --mode production",
+    "analyze": "source-map-explorer 'public/*.js'",
+    "predeploy": "webpack --mode production --config webpack.config.babel.prod.js",
     "deploy": "gh-pages -d public -b master"
   },
   "author": "",
@@ -30,6 +31,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "sass-loader": "^7.1.0",
+    "source-map-explorer": "^2.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",

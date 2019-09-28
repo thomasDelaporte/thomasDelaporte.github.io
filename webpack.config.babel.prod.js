@@ -7,17 +7,12 @@ module.exports = (env, argv) => {
 
         entry: path.resolve(__dirname, 'source/index.js'),
 
-        devServer: {
-            compress: true,
-			historyApiFallback: true,
-            contentBase: path.resolve(__dirname, 'public'),
-			port: 8083
-        },
-        
         output: {
             filename: 'ui.min.js',
             path: path.resolve(__dirname, 'public')
         },
+
+        devtool: 'source-map',
 		
         module: {
             rules: [
@@ -53,6 +48,13 @@ module.exports = (env, argv) => {
         },
 
         optimization: {
+            nodeEnv: 'production',
+            flagIncludedChunks: true,
+            occurrenceOrder: true,
+            sideEffects: true,
+            usedExports: true,
+            concatenateModules: true,
+            checkWasmTypes: true,
             minimize: true
         }
     }
