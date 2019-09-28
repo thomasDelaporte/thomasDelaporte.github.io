@@ -11,7 +11,7 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://thomasdelaporte.github.io/Portfolio/",
+  "homepage": "https://thomasdelaporte.github.io/",
   "dependencies": {
     "disable-scroll": "^0.4.1",
     "react-image-lightbox": "5.0.0",
