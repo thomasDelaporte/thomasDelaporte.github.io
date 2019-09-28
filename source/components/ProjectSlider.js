@@ -31,12 +31,12 @@ export default class ProjectSlider extends React.PureComponent {
         window.removeEventListener('wheel', this.wheelEvent);
     }
 
-    wheelEvent = (event) => {
+    wheelEvent = (e) => {
 
         if(this.state.pause)
             return;
 
-        this.moveSlide(event.deltaY / 100);
+        this.moveSlide((e.deltaY < 0 || e.wheelDelta > 0)  ? -1 : 1);
     }
 
     moveSlide = (number) => {
@@ -72,7 +72,7 @@ export default class ProjectSlider extends React.PureComponent {
         if(children.length <= 0) 
             return;
 
-        const offsetWidth = children[0].clientWidth;
+        const offsetWidth = children[0].offsetWidth;
         const maxIndex = this.projectsCount - Math.ceil((slider.offsetWidth / offsetWidth));
 
         this.setState({offsetWidth, maxIndex}, () => callback && callback(offsetWidth, slider));
@@ -80,7 +80,8 @@ export default class ProjectSlider extends React.PureComponent {
 
     render(){
 
-        const offsetMargin = Math.min(Math.max(this.state.focusIndex * this.state.offsetWidth, 0), this.state.offsetWidth * this.state.maxIndex);
+        const { offsetWidth } = this.state;
+        const offsetMargin = Math.min(Math.max(this.state.focusIndex * offsetWidth, 0), offsetWidth * this.state.maxIndex);
 
         return (
             <section className="section projects-slider">
