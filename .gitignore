@@ -26,3 +26,5 @@ web-build/dist
 .vscode
 prod.list*
 packages-microsoft-prod.deb*
+
+public/
