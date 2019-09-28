@@ -12,10 +12,10 @@ import InternshipsALIONAX from './pages/interships/alionax';
 import IntershipsECF from './pages/interships/ecf';
 import Contact from './pages/Contact';
 
-const Main = () => (
+const Main = (props) => (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Layout>
-            <Switch location={this.props.location}>
+            <Switch location={props.location}>
 
                 <Route exact path='/about' component={About} />
                 <Route exact path='/' component={Home} />
