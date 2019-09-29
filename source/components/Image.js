@@ -1,5 +1,5 @@
 import React from 'react';
-import disableScroll from 'disable-scroll';
+import { disableScroll, enableScroll } from '../utils/Events';
 
 export default class Image extends React.Component {
 
@@ -11,14 +11,14 @@ export default class Image extends React.Component {
         }
     }
 
-    componentWillMount(){
+    componentDidMount(){
         document.addEventListener('keydown', this.closeLightboxKey);
     }
 
     componentWillUnmount(){
 
         document.removeEventListener('keydown', this.closeLightboxKey);
-        disableScroll.off();
+        enableScroll();
     }
 
     closeLightboxKey = (e) => {
@@ -33,14 +33,14 @@ export default class Image extends React.Component {
     openLightbox = () => {
 
         this.setState({ isOpen: true }, function(){
-            disableScroll.on();
+            disableScroll();
         });
     }
 
     closeLigthbox = () => {
 
         this.setState({ isOpen: false }, function(){
-            disableScroll.off();
+            enableScroll();
         });
     }
 

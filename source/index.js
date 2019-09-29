@@ -12,6 +12,8 @@ import InternshipsALIONAX from './pages/interships/alionax';
 import IntershipsECF from './pages/interships/ecf';
 import Contact from './pages/Contact';
 
+import "./styles/main.scss";
+
 const Main = (props) => (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Layout>
