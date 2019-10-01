@@ -1,4 +1,5 @@
 import React from 'react';
+import { enableScroll, disableScroll } from '../utils/Events';
 
 export default class Caroussel extends React.PureComponent {
 
@@ -16,14 +17,20 @@ export default class Caroussel extends React.PureComponent {
     }
 
     componentWillUnmount() {
+
+        enableScroll();
         document.removeEventListener('keydown', this.keyboardEvent);
     }
 
     static getDerivedStateFromProps(props, currentState) {
 
-        if(currentState.isOpen != props.isOpen)
-            return {isOpen: props.isOpen}
+        if(currentState.isOpen != props.isOpen) {
+            
+            if(props.isOpen) disableScroll();
 
+            return {isOpen: props.isOpen}
+        }
+        
         return null;
     }
 
@@ -33,7 +40,7 @@ export default class Caroussel extends React.PureComponent {
             return;
 
         if(e.keyCode == 27){
-            this.props.closeCaroussel();
+            this.closeCaroussel();
         } else if(e.keyCode == 37){
             this.moveIndex(-1);
         } else if(e.keyCode == 39){
@@ -58,6 +65,12 @@ export default class Caroussel extends React.PureComponent {
         })
     }
 
+    closeCaroussel = () => {
+
+        enableScroll();
+        this.props.closeCaroussel();
+    }
+
     render(){
 
         if(this.props.images === undefined || this.state.isOpen == false)
@@ -66,18 +79,22 @@ export default class Caroussel extends React.PureComponent {
         return (
             <div className="caroussel">
 
-                <button className="btn btn-black" onClick={this.props.closeCaroussel}>
+                <button className="btn btn-gradient btn-close" onClick={this.closeCaroussel}>
                     <i className="ion ion-md-close"></i>
                 </button>
 
                 {this.state.imageIndex != 0 && 
-                    <i className="ion ion-md-arrow-round-back" onClick={() => this.moveIndex(-1)}></i>
+                    <button className="btn btn-black btn-previous"  onClick={() => this.moveIndex(-1)}>
+                        <i className="ion ion-md-arrow-round-back"></i>
+                    </button>
                 }
                 
                 <img src={this.props.images[this.state.imageIndex]} />
                 
                 {this.state.imageIndex != this.props.images.length - 1 &&
-                    <i className="ion ion-md-arrow-round-forward" onClick={() => this.moveIndex(1)}></i>
+                    <button className="btn btn-black btn-next" onClick={() => this.moveIndex(1)}>
+                        <i className="ion ion-md-arrow-round-forward"></i>
+                    </button>
                 }
             </div>
         )

@@ -8,3 +8,29 @@ window.addEventListener('resize', function(e) {
     timeout = setTimeout(() => document.dispatchEvent(event), delay);
 });
 
+const keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+    e.preventDefault();
+    e.stopPropagation();
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e); return false;
+    }
+}
+
+export const disableScroll = () => {
+    if (window.addEventListener)
+        window.addEventListener('DOMMouseScroll', preventDefault, { passive: false });
+
+    document.addEventListener('wheel', preventDefault, { passive: false });
+}
+  
+export const enableScroll = () => {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, { passive: false });
+
+    document.removeEventListener('wheel', preventDefault, { passive: false }); 
+}

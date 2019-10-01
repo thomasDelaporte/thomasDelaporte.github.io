@@ -13,7 +13,6 @@
   "license": "ISC",
   "homepage": "https://thomasdelaporte.github.io/",
   "dependencies": {
-    "disable-scroll": "^0.4.1",
     "react-image-lightbox": "5.0.0",
     "react-timeline-scribble": "^1.0.14",
     "resize-end": "^1.1.1"

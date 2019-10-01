@@ -1,8 +1,6 @@
 import React from "react"
 import { Link, withRouter } from "react-router-dom"
-import disableScroll from 'disable-scroll';
-
-import "../styles/main.scss";
+import { enableScroll, disableScroll } from '../utils/Events';
 
 class Layout extends React.Component {
 
@@ -24,9 +22,8 @@ class Layout extends React.Component {
 	closeNavigation(){
 
 		this.setState({ isActive: false }, function(){
-			window.scrollTo(0, 0)
-			disableScroll.off();
-		})
+			window.scrollTo(0, 0); enableScroll();
+		});
 	}
   
 	render(){
