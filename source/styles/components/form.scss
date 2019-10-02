@@ -40,4 +40,12 @@
 
         cursor: pointer;
     }
+
+    &.form-disabled {
+        opacity: .5;
+
+        input, textarea {
+            cursor: no-drop;
+        }
+    }
 }

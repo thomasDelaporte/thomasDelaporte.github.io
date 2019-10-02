@@ -20,20 +20,20 @@ export default () => (
                     <p>Vous avez <b>une idée, un projet</b> que vous souhaitez réalisez ou un besoins spécifiques en liens avec mes compétences.
                         N'hésitez pas a me contacter a travers de ce formulaire si l'envie vous prends.</p>
 
-                    <form className="form">
+                    <form className="form form-disabled">
                         <div className="form-row">
-                            <input type="text" placeholder="Nom" />
-                            <input type="mail" placeholder="Adresse mail" />
+                            <input type="text" placeholder="Nom" disabled />
+                            <input type="mail" placeholder="Adresse mail" disabled />
                         </div>
                         
                         <div className="form-row">
-                            <input type="phone" placeholder="Téléphone (optionnel)" />
-                            <input type="text" placeholder="Sujet" />
+                            <input type="phone" placeholder="Téléphone (optionnel)" disabled />
+                            <input type="text" placeholder="Sujet" disabled />
                         </div>
                             
-                        <textarea placeholder="Votre message"></textarea>
+                        <textarea placeholder="Votre message" disabled></textarea>
                             
-                        <input type="submit" className="btn btn-white" value="Envoyer" />
+                        <input type="submit" className="btn btn-white" value="Envoyer" disabled />
                     </form>
                 </div>
             </div>

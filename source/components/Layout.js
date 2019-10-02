@@ -1,4 +1,5 @@
 import React from "react"
+import ReactGA from 'react-ga';
 import { Link, withRouter } from "react-router-dom"
 import { enableScroll, disableScroll } from '../utils/Events';
 
@@ -10,6 +11,18 @@ class Layout extends React.Component {
 		this.state = {
 			isActive: false
 		}
+	}
+
+	componentDidMount() {
+
+		ReactGA.initialize('UA-82411132-1', { debug: false });
+		ReactGA.pageview(this.props.location.pathname);
+	}
+
+	componentDidUpdate(prevProps){
+
+		if(this.props.location != prevProps.location)
+			ReactGA.pageview(this.props.location.pathname);
 	}
 
 	handleNavigation(){

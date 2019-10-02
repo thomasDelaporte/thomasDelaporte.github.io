@@ -1,6 +1,7 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import ReactGA from 'react-ga';
 
 import Layout from './components/Layout';
 
