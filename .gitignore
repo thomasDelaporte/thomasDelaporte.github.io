@@ -27,4 +27,4 @@ web-build/dist
 prod.list*
 packages-microsoft-prod.deb*
 
-public/
+public
