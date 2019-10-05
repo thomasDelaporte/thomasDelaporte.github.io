@@ -1,7 +1,12 @@
 import React from "react"
+import { Helmet } from 'react-helmet';
 
 export default () => (
     <section className="section section-e about">
+
+        <Helmet>
+			<meta name="description" content="En savoir plus sur moi."/>
+		</Helmet>
 
         <div className="about-wrapper">
                 

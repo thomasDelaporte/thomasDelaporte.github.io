@@ -1,8 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 export default () => (
     
     <section className="section section-f">
+
+        <Helmet>
+			<meta name="description" content="Vous souhaitez me contacter ?, alors ce formulaire devrait vous aider."/>
+		</Helmet>
+
         <div className="container">
             
             <div className="grid grid-1-2">

@@ -1,6 +1,8 @@
 import React from "react"
 import ReactGA from 'react-ga';
-import { Link, withRouter } from "react-router-dom"
+import { Link, withRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 import { enableScroll, disableScroll } from '../utils/Events';
 
 class Layout extends React.Component {
@@ -43,6 +45,10 @@ class Layout extends React.Component {
 		return (
 			<div className="app">
 
+				<Helmet>
+					<meta name="description" content="Je suis un développeur front-end curieux et dynamique indépendant actuellement en étude."/>
+				</Helmet>
+
 				<nav className={"nav" + (this.state.isActive ? " is-active" : "")}>
 
 					<span className="nav-menu" onClick={this.handleNavigation.bind(this)}>
@@ -81,7 +87,10 @@ class Layout extends React.Component {
 
 					<div className="nav-wrapper">
 						<ul className="nav-content">
-							<li><Link to="/" onClick={this.closeNavigation.bind(this)}>Accueil</Link></li>
+							<li>
+								<Link to="/" onClick={this.closeNavigation.bind(this)}>Accueil</Link>
+								<p>Liste de mes projets</p>	
+							</li>
 							<li>
 								<Link to="/about" onClick={this.closeNavigation.bind(this)}>A propos</Link>
 								<p>Vous voulez en savoir plus sur moi ?</p>

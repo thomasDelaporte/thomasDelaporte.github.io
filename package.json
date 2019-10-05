@@ -14,6 +14,7 @@
   "homepage": "https://thomasdelaporte.github.io/",
   "dependencies": {
     "react-ga": "^2.6.0",
+    "react-helmet": "^5.2.1",
     "react-image-lightbox": "5.0.0",
     "react-timeline-scribble": "^1.0.14",
     "resize-end": "^1.1.1"

@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export default () => (
     
     <section className="section internships">
+
+        <Helmet>
+			<meta name="description" content="Vous souhaitez plus de détails sur mes stages ?"/>
+		</Helmet>
         
         <div className="internship-item alionax">
             

@@ -15,7 +15,7 @@ export default class Image extends React.Component {
         document.addEventListener('keydown', this.closeLightboxKey);
     }
 
-    componentWillUnmount(){
+    componentDidMount(){
 
         document.removeEventListener('keydown', this.closeLightboxKey);
         enableScroll();
