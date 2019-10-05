@@ -17,8 +17,8 @@ export default () => (
 
                 <div className="contact-form">
                     <h4>Une question précise ?</h4>
-                    <p>Vous avez <b>une idée, un projet</b> que vous souhaitez réalisez ou un besoins spécifiques en liens avec mes compétences.
-                        N'hésitez pas a me contacter a travers de ce formulaire si l'envie vous prends.</p>
+                    <p>Vous avez <b>une idée, un projet</b> que vous souhaitez réaliser ou un besoin spécifiques en lien avec mes compétences.
+                        N'hésitez pas à me contacter à travers de ce formulaire si l'envie vous prend (s'il n'est pas désactivé).</p>
 
                     <form className="form form-disabled">
                         <div className="form-row">
