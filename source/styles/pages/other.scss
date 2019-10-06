@@ -1,0 +1,41 @@
+.other {
+    height: 100vh;
+    display: grid;
+    grid-gap: $padding;
+    grid-auto-flow: column;
+    
+    &>.project-item {
+        
+        cursor: pointer;
+        
+        &:nth-child(5n) {
+            grid-column: span 2; 
+            grid-row: span 2;
+        }
+
+        &:hover {
+            &>img {
+                transform: scale(1.2);
+            }
+        }
+
+        &>iframe {
+            animation: appearOpacity 1.25s;
+        }
+
+        .btn-close {
+            position: absolute;
+            height: $padding * 3;
+            width: $padding * 3;
+            font-size: 20px;
+            bottom: 0;
+            z-index: 999;
+        }
+
+        &.is-active {
+            grid-row: span 4;
+            grid-column: span 4;
+        }
+    }
+      
+}

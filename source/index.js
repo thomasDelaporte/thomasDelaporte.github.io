@@ -1,7 +1,6 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import ReactGA from 'react-ga';
 
 import Layout from './components/Layout';
 
@@ -12,6 +11,7 @@ import Interships from './pages/Internships';
 import InternshipsALIONAX from './pages/interships/alionax';
 import IntershipsECF from './pages/interships/ecf';
 import Contact from './pages/Contact';
+import Other from './pages/Other';
 
 import "./styles/main.scss";
 
@@ -28,6 +28,8 @@ const Main = (props) => (
                 <Route exact path='/internships/alionax' component={InternshipsALIONAX} />
 
                 <Route exact path='/contact' component={Contact} />
+
+                <Route exact path='/other' component={Other} />
 
                 <Route path='*' component={Error} />
             </Switch>

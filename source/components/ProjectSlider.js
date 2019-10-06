@@ -12,8 +12,8 @@ export default class ProjectSlider extends React.PureComponent {
         this.state = {
             focusIndex: 0,
             offsetWidth: 0,
-            maxIndex: (this.projectsCount - props.perPage),
-            pause: (document.body.clientWidth <= 725)
+            maxIndex: (this.projectsCount - props.perPage), //#TODO: Move to this properties ( no need to update )
+            pause: (document.body.clientWidth <= 725) //#TODO: Move to this properties ( no need to update )
         }
     }
 

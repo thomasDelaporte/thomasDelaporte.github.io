@@ -1,14 +1,18 @@
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-*,*:before,*:after{
+*,*:before,*:after {
     box-sizing: border-box; 
     margin: 0;
     padding: 0;
 }
 
-ul{
+ul {
     list-style-type: none;
+}
+
+iframe {
+    border: none;
 }

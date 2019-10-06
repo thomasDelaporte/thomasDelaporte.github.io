@@ -27,14 +27,14 @@ class Layout extends React.Component {
 			ReactGA.pageview(this.props.location.pathname);
 	}
 
-	handleNavigation(){
+	handleNavigation = () => {
 
 		this.setState({
 			isActive: !this.state.isActive
 		});
 	}
 
-	closeNavigation(){
+	closeNavigation = () => {
 
 		this.setState({ isActive: false }, function(){
 			window.scrollTo(0, 0); enableScroll();
@@ -88,16 +88,17 @@ class Layout extends React.Component {
 					<div className="nav-wrapper">
 						<ul className="nav-content">
 							<li>
-								<Link to="/" onClick={this.closeNavigation.bind(this)}>Accueil</Link>
+								<Link to="/" onClick={this.closeNavigation}>Accueil</Link>
 								<p>Liste de mes projets</p>	
 							</li>
 							<li>
-								<Link to="/about" onClick={this.closeNavigation.bind(this)}>A propos</Link>
+								<Link to="/about" onClick={this.closeNavigation}>A propos</Link>
 								<p>Vous voulez en savoir plus sur moi ?</p>
 							</li>
-							<li><Link to="/interships" onClick={this.closeNavigation.bind(this)}>Stages</Link></li>
+							<li><Link to="/other" onClick={this.closeNavigation}>Projets divers</Link></li>
+							<li><Link to="/interships" onClick={this.closeNavigation}>Stages</Link></li>
 
-							<li><Link to="/contact" onClick={this.closeNavigation.bind(this)}>Contact</Link></li>
+							<li><Link to="/contact" onClick={this.closeNavigation}>Contact</Link></li>
 						</ul>
 					</div>
 				</nav>

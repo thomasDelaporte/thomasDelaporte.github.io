@@ -23,18 +23,21 @@ export default class PPE extends React.Component {
         return (
             <div className="project-item">
 				<h1>{this.props.number}</h1>
-				<small className="projects-item-info"><b>{this.props.date}</b>{this.props.tag}</small>
+				<small className="project-item-info"><b>{this.props.date}</b>{this.props.tag}</small>
 				<h3>{this.props.title}</h3>
-            
-                <div className="project-item-links">
-                    {this.props.images &&
-                        <a href="#" onClick={this.openLightBox}>Voir les images</a>
-                    }
 
-                    {this.props.link &&
-                        <a href={this.props.link} target="_blank">Voir projet</a>
-                    }
-                </div>
+                {this.props.link || this.props.images &&
+                    <div className="project-item-links">
+                        {this.props.images &&
+                            <a href="#" onClick={this.openLightBox}>Voir les images</a>
+                        }
+
+                        {this.props.link &&
+                            <a href={this.props.link} target="_blank">Voir projet</a>
+                        }
+                    </div>
+                }
+                
                 
                 {this.props.background &&
                     <img src={this.props.background} />

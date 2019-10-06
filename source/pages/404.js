@@ -7,6 +7,6 @@ export default () => (
 			<h2>Not Found</h2>
 		</div>
 
-		<p>Vous venez de frapper un itinéraire qui n'existe pas… la tristesse..</p>
+		<p>Vous venez de frapper un itinéraire qui n'existe pas...</p>
 	</section>
 )

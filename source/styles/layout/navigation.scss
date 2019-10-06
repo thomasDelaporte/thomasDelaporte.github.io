@@ -128,7 +128,10 @@
         overflow: hidden;
         display: flex;
         align-items: center;
+
         transition: all .5s ease-in-out;
+        transition-property: width, left;
+        will-change: width, left;
 
         .nav-content{
             padding: 0 ($padding * 2);

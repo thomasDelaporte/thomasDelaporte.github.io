@@ -89,4 +89,11 @@
             color: #fff;
         }
     }
+
+    &.btn-close {
+        transition: padding-bottom .2s ease-in;
+        left: 0;
+
+        &:hover { padding-bottom: $padding / 2; }
+    }
 }
